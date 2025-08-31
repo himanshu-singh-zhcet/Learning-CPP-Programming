@@ -4,24 +4,23 @@ class complex;  //  forward deceleration
 
 class calculator{
     public:
-    int add(int a, int b){
-    return a+b;
-    }
-    int sumrealcomplex(complex ,complex );  //function decelartion
-    
+        int add(int a, int b){
+            return a+b;
+        }
+        int sumrealcomplex(complex ,complex );  //function decelartion 
 };
 
 class complex{
     int a,b;
     friend int calculator :: sumrealcomplex(complex ,complex );
     public:
-    void setnumber(int n1,int n2){
-        a=n1;
-        b=n2;
-    }
-    void printnumber(){
-        cout<<"the no is "<<a<<"+"<<b<<"i"<<endl;
-    }
+        void setnumber(int n1,int n2){
+            a=n1;
+            b=n2;
+        }
+        void printnumber(){
+            cout<<"the no is "<<a<<"+"<<b<<"i"<<endl;
+        }
 };
 
 int calculator:: sumrealcomplex(complex o1,complex o2){   //
@@ -37,7 +36,5 @@ int main(){
     calculator calc;
     int res = calc.sumrealcomplex(o1,o2);
     cout<<"the sum of real part of o1 and o2 "<<res<<endl;
-
-
-return 0;
+    return 0;
 }
