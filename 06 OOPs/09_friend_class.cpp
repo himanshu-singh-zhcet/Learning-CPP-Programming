@@ -7,23 +7,37 @@ class calculator{
     return a+b;
     }
     int sumrealcomplex(complex ,complex );  //function decelartion
+    int sumcompcomplex(complex ,complex );  //function decelartion
     
 };
 class complex{
     int a,b;
+
+    // individually declaring function as friends
+    // friend int calculator :: sumrealcomplex(complex ,complex );
+    // friend int calculator :: sumcompcomplex(complex ,complex );
+
     friend class calculator; // making the whole calculator class frnd
+
     public:
-    void setnumber(int n1,int n2){
-        a=n1;
-        b=n2;
-    }
-    void printnumber(){
-        cout<<"the no is "<<a<<"+"<<b<<"i"<<endl;
-    }
+        void setnumber(int n1,int n2){
+            a=n1;
+            b=n2;
+        }
+        void printnumber(){
+            cout<<"the no is "<<a<<"+"<<b<<"i"<<endl;
+        }
 };
+
 int calculator:: sumrealcomplex(complex o1,complex o2){   //
     return (o1.a+o2.a);
 }
+
+int calculator:: sumcompcomplex(complex o1,complex o2){   //
+    return (o1.b+o2.b);
+}
+
+
 int main(){
     complex o1,o2;
     o1.setnumber(2,4);
@@ -33,7 +47,5 @@ int main(){
     calculator calc;
     int res = calc.sumrealcomplex(o1,o2);
     cout<<"the sum of real part of o1 and o2 "<<res<<endl;
-
-
-return 0;
+    return 0;
 }

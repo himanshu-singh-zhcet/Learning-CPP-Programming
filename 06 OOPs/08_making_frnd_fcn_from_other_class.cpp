@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 class complex;  //  forward deceleration 
+
 class calculator{
     public:
     int add(int a, int b){
@@ -9,6 +10,7 @@ class calculator{
     int sumrealcomplex(complex ,complex );  //function decelartion
     
 };
+
 class complex{
     int a,b;
     friend int calculator :: sumrealcomplex(complex ,complex );
@@ -21,9 +23,11 @@ class complex{
         cout<<"the no is "<<a<<"+"<<b<<"i"<<endl;
     }
 };
+
 int calculator:: sumrealcomplex(complex o1,complex o2){   //
     return (o1.a+o2.a);
 }
+
 int main(){
     complex o1,o2;
     o1.setnumber(2,4);
