@@ -20,7 +20,7 @@ int main(){
     // implicit call
     complex a(4,5);
     // explicit call
-    complex b=  complex(5,7);
+    complex b = complex(5,7);
     a.printnumber();
     b.printnumber();
 

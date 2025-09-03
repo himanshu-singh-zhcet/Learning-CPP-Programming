@@ -6,8 +6,10 @@ class employee{
         int a,b,c;
 
     public:
-    int d,e;
+        int d,e;
+
         void setdata(int a1,int b1,int c1);
+        
         void getdata(){
             printf("the value of a is %d \n",a);
             printf("the value of b is %d \n",b);

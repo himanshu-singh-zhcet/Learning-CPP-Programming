@@ -1,31 +1,42 @@
 #include<iostream>
 using namespace std;
+
 // base class
 class employee{
-public:
-int id;
-float salary;
-employee(){}
-employee(int id1){
-id =id1;
-salary=34.0;
-}
+
+    public:
+        int id;
+        float salary;
+
+        employee(){}
+
+        employee(int id1){
+            id = id1;
+            salary=34.0;
+        }
 };
+
 // derived class    creating a programmer class from employee class
 class programmer: public employee{
-public:
-int languagecode;
-programmer(int id2){   
-id = id2;
-languagecode=9;
-}
-void getid(){
-    cout<<id<<endl;
-}
-void getlanguagecode(){
-    cout<<languagecode<<endl;
-}
+
+    public:
+        int languagecode;
+
+        programmer(int id2){   
+            id = id2;
+            languagecode=9;
+            // ye yhaa aakar employee class or base class ke default constructor ko call karega
+        }
+
+        void getid(){
+            cout<<id<<endl;
+        }
+
+        void getlanguagecode(){
+            cout<<languagecode<<endl;
+        }
 };
+
 int main(){
     employee rohan(5);
     cout<<rohan.salary<<endl;
@@ -36,6 +47,5 @@ int main(){
     nitin.getid();
     nitin.getlanguagecode();
     
-
-return 0;
+    return 0;
 }
